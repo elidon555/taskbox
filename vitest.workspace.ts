@@ -16,7 +16,7 @@ export default defineWorkspace([
       name: 'storybook',
       browser: {
         enabled: true,
-        headless: false,
+        headless: true,
         name: 'chromium',
         provider: 'playwright',
       },
