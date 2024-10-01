@@ -1,6 +1,6 @@
 import React, {FunctionComponent} from "react";
+import {Box, MantineProvider, Paper} from "@mantine/core";
 
-console.log('asdasdasdasdasdasdasdasdsadasdas');
 const preview: import('@storybook/react').Preview = {
   parameters: {
     controls: {
@@ -13,13 +13,14 @@ const preview: import('@storybook/react').Preview = {
 };
 
 export const decorators = [
-  (Story: FunctionComponent) => (
-      <div>
-        <div>
-          test123
-        </div>
-      <Story/>
-      </div>
+  (Story) => (
+      <MantineProvider>
+          <Paper>
+            <Box pos="relative">
+              <Story/>
+            </Box>
+          </Paper>
+      </MantineProvider>
   ),
 ]
 

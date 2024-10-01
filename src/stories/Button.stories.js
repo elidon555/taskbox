@@ -16,28 +16,21 @@ export default {
   args: { onClick: fn() },
 };
 
-// decorator isn't auto applied from preview.tsx
+// decorator isn't auto applied from preview.tsx, this will fail to render
 export const Primary = {
   args: {
     primary: true,
     label: 'Button',
   },
   play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    await expect(canvas.getByText('test123')).not.toBeNull();
   }
 };
 
-// decorator imported manually => however imagine doing this for every component
-// not convenient
+// decorator imported manually => doesnt fail rendering
 export const PrimaryWithForcedDecorator = {
   args: {
     primary: true,
     label: 'Button',
   },
   decorators: decorators,
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    await expect(canvas.getByText('test123')).not.toBeNull();
-  }
 };
