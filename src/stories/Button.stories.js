@@ -1,6 +1,7 @@
 import { userEvent, within, expect, fn } from '@storybook/test';
 import { Button } from '../components/Button.jsx';
 import {decorators} from "/.storybook/preview";
+import {test} from "vitest";
 
 export default {
   title: 'Example/Button',
@@ -27,7 +28,7 @@ export const Primary = {
   }
 };
 
-// decorator importd manually => however imagine doing this for every component
+// decorator imported manually => however imagine doing this for every component
 // not convenient
 export const PrimaryWithForcedDecorator = {
   args: {

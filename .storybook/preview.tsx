@@ -1,8 +1,7 @@
 import React, {FunctionComponent} from "react";
-import {MantineProvider} from "@mantine/core";
 
-/** @type { import('@storybook/react').Preview } */
-const preview = {
+console.log('asdasdasdasdasdasdasdasdsadasdas');
+const preview: import('@storybook/react').Preview = {
   parameters: {
     controls: {
       matchers: {
